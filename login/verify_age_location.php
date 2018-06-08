@@ -74,7 +74,7 @@ if ($mform->is_cancelled()) {
             redirect(new moodle_url('/login/signup.php'));
         }
     } catch (moodle_exception $e) {
-        // Display a user-friendly error message.
+        // This shows a user friendly message.
         $errormessage = get_string('couldnotverifyagedigitalconsent', 'error');
         $page = new \core_auth\output\verify_age_location_page($mform, $errormessage);
         echo $OUTPUT->header();
